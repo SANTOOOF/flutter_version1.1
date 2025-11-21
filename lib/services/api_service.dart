@@ -5,7 +5,7 @@ import 'package:opttrajflutter/models/route.dart';
 class ApiService {
   static const String _envBaseUrl = String.fromEnvironment('API_URL');
   final String _baseUrl =
-      _envBaseUrl.isNotEmpty ? _envBaseUrl : 'http://localhost:8080';
+      _envBaseUrl.isNotEmpty ? _envBaseUrl : 'http://172.30.80.11:31004';
 
   Future<Route> getRouteById(int routeId) async {
     final response = await http.get(Uri.parse('$_baseUrl/routes/$routeId'));
